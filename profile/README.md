@@ -20,4 +20,4 @@ You can find more information, documentation, and access our downloads by visiti
 
 <img width="130" height="300" alt="Kyoko RENDER" src="https://github.com/user-attachments/assets/324a1096-7447-4781-bad6-5a2c9e56ad3a" />
 
-# KYOUKO LOVE`s VOIDLINUX
+# KYOUKO LOVE's VOIDLINUX
