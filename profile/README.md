@@ -18,4 +18,4 @@ Within this organization, we manage the development environment and foster open-
 
 You can find more information, documentation, and access our downloads by visiting our official website at nekovoid.vercel.app or by exploring the pinned repositories on this page. (=^ ◡ ^=)
 
-# KYOUKO LOVE`s rm -fr /
+# KYOUKO LOVE`s VOIDLINUX
