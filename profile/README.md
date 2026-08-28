@@ -21,3 +21,65 @@ You can find more information, documentation, and access our downloads by visiti
 <img width="130" height="178" alt="Kyoko RENDER" src="https://github.com/user-attachments/assets/324a1096-7447-4781-bad6-5a2c9e56ad3a" />
 
 # KYOUKO LOVE's VOIDLINUX
+
+## Repository Map (/*w/)
+
+```mermaid
+graph LR
+  NV((Neko Void)) --> Core[Core & Build]
+  NV --> HW[Hardware & Kernel]
+  NV --> Desktop[Desktop Experience]
+  NV --> Tools[Tools & Daemons]
+  NV --> Web[Web & Misc]
+
+  Core --> Neko-Void("Neko-Void")
+  Core --> repo-neko("repo-neko")
+  Core --> rootfs-custom("rootfs-custom")
+  Core --> musl-repo("musl-repo")
+
+  click Neko-Void "[https://github.com/TU_ORG/Neko-Void](https://github.com/TU_ORG/Neko-Void)"
+  click repo-neko "[https://github.com/TU_ORG/repo-neko](https://github.com/TU_ORG/repo-neko)"
+  click rootfs-custom "[https://github.com/TU_ORG/rootfs-custom](https://github.com/TU_ORG/rootfs-custom)"
+  click musl-repo "[https://github.com/TU_ORG/musl-repo](https://github.com/TU_ORG/musl-repo)"
+
+  HW --> kernel-neko-void("kernel-neko-void")
+  HW --> Neko-Kernel-Manager("Neko-Kernel-Manager")
+  HW --> nvidia-support("nvidia-support")
+  HW --> bluetooth-enabler("bluetooth-enabler")
+  HW --> printer-enable("printer-enable")
+
+  click kernel-neko-void "[https://github.com/TU_ORG/kernel-neko-void](https://github.com/TU_ORG/kernel-neko-void)"
+  click Neko-Kernel-Manager "[https://github.com/TU_ORG/Neko-Kernel-Manager](https://github.com/TU_ORG/Neko-Kernel-Manager)"
+  click nvidia-support "[https://github.com/TU_ORG/nvidia-support](https://github.com/TU_ORG/nvidia-support)"
+  click bluetooth-enabler "[https://github.com/TU_ORG/bluetooth-enabler](https://github.com/TU_ORG/bluetooth-enabler)"
+  click printer-enable "[https://github.com/TU_ORG/printer-enable](https://github.com/TU_ORG/printer-enable)"
+
+  Desktop --> Neko-Wizard("Neko-Wizard")
+  Desktop --> neko-desktops("neko-desktops")
+  Desktop --> neko-backgrounds("neko-backgrounds")
+
+  click Neko-Wizard "[https://github.com/TU_ORG/Neko-Wizard](https://github.com/TU_ORG/Neko-Wizard)"
+  click neko-desktops "[https://github.com/TU_ORG/neko-desktops](https://github.com/TU_ORG/neko-desktops)"
+  click neko-backgrounds "[https://github.com/TU_ORG/neko-backgrounds](https://github.com/TU_ORG/neko-backgrounds)"
+
+  Tools --> cnr("cnr")
+  Tools --> falcond("falcond")
+  Tools --> raven-polkit("raven-polkit")
+  Tools --> Neko-Update("Neko-Update")
+  Tools --> dmemcg-booster-nk("dmemcg-booster-nk")
+  Tools --> kyoz("kyoz")
+
+  click cnr "[https://github.com/TU_ORG/cnr](https://github.com/TU_ORG/cnr)"
+  click falcond "[https://github.com/TU_ORG/falcond](https://github.com/TU_ORG/falcond)"
+  click raven-polkit "[https://github.com/TU_ORG/raven-polkit](https://github.com/TU_ORG/raven-polkit)"
+  click Neko-Update "[https://github.com/TU_ORG/Neko-Update](https://github.com/TU_ORG/Neko-Update)"
+  click dmemcg-booster-nk "[https://github.com/TU_ORG/dmemcg-booster-nk](https://github.com/TU_ORG/dmemcg-booster-nk)"
+  click kyoz "[https://github.com/TU_ORG/kyoz](https://github.com/TU_ORG/kyoz)"
+
+  Web --> nk-web("nk-web")
+  Web --> github(".github")
+  Web --> demo-repository("demo-repository")
+
+  click nk-web "[https://github.com/TU_ORG/nk-web](https://github.com/TU_ORG/nk-web)"
+  click github "[https://github.com/TU_ORG/.github](https://github.com/TU_ORG/.github)"
+  click demo-repository "[https://github.com/TU_ORG/demo-repository](https://github.com/TU_ORG/demo-repository)"
