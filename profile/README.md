@@ -8,7 +8,7 @@ Our main focus is to offer the speed of a minimal base system along with a ready
 
 ## Ecosystem Features (b^_^)b
 
-We work to deliver a highly functional operating system right out of the box. Neko Void includes full Vulkan support with pre-configured Intel and AMD drivers, native PipeWire integration for multimedia workloads, and ready-to-use tools like Flatpak, Octoxbps, and btop. We support architectures with both UEFI and Legacy BIOS systems to ensure maximum hardware compatibility.
+We work to deliver a highly functional operating system right out of the box. Neko Void includes full Vulkan support with pre-configured Intel and AMD drivers, native PipeWire integration for multimedia workloads, and ready-to-use tools like iruka-xbps, Neko-Kernel-Manager, Vouru, Falcond, and btop. We support architectures with both UEFI and Legacy BIOS systems to ensure maximum hardware compatibility.
 
 ## Projects and Collaboration ヽ(´▽`)/
 
@@ -25,35 +25,89 @@ You can find more information, documentation, and access our downloads by visiti
 ## Repository Map UwU
 
 ```mermaid
-graph LR
-  NV((Neko Void)) --> Core[Core & Build]
-  NV --> HW[Hardware & Kernel]
-  NV --> Desktop[Desktop Experience]
-  NV --> Tools[Tools & Daemons]
-  NV --> Web[Web & Misc]
+%%{init: {'theme': 'dark', 'themeVariables': {
+  'primaryColor': '#0f261a',
+  'primaryTextColor': '#bbf7d0',
+  'primaryBorderColor': '#22c55e',
+  'lineColor': '#166534',
+  'secondaryColor': '#14532d',
+  'tertiaryColor': '#0f261a',
+  'background': '#070f0b',
+  'mainBkg': '#0f261a',
+  'nodeBorder': '#22c55e',
+  'clusterBkg': '#0a1a12',
+  'clusterBorder': '#14532d',
+  'fontFamily': 'Inter, -apple-system, sans-serif',
+  'fontSize': '13px'
+}}}%%
+flowchart LR
 
-  Core --> Neko-Void
-  Core --> repo-neko
-  Core --> rootfs-custom
-  Core --> musl-repo
+    NekoVoid(("Neko Void"))
 
-  HW --> kernel-neko-void
-  HW --> Neko-Kernel-Manager
-  HW --> nvidia-support
-  HW --> bluetooth-enabler
-  HW --> printer-enable
+    subgraph CORE["Core & Build"]
+        direction TB
+        Neko-Void["Neko-Void"]
+        repo-neko["repo-neko"]
+        rootfs-custom["rootfs-custom"]
+        musl-repo["musl-repo"]
+    end
 
-  Desktop --> Neko-Wizard
-  Desktop --> neko-desktops
-  Desktop --> neko-backgrounds
+    subgraph HW["Hardware & Kernel"]
+        direction TB
+        kernel-neko-void["kernel-neko-void"]
+        Neko-Kernel-Manager["Neko-Kernel-Manager"]
+        nvidia-support["nvidia-support"]
+        bluetooth-enabler["bluetooth-enabler"]
+        printer-enable["printer-enable"]
+    end
 
-  Tools --> cnr
-  Tools --> falcond
-  Tools --> raven-polkit
-  Tools --> Neko-Update
-  Tools --> dmemcg-booster-nk
-  Tools --> kyoz
+    subgraph DESKTOP["Desktop Experience"]
+        direction TB
+        Neko-Wizard["Neko-Wizard"]
+        neko-desktops["neko-desktops"]
+        neko-backgrounds["neko-backgrounds"]
+    end
 
-  Web --> nk-web
-  Web --> github(".github")
-  Web --> demo-repository
+    subgraph TOOLS["Tools & Daemons"]
+        direction TB
+        cnr["cnr"]
+        falcond["falcond"]
+        raven-polkit["raven-polkit"]
+        Neko-Update["Neko-Update"]
+        dmemcg-booster-nk["dmemcg-booster-nk"]
+        kyoz["kyoz"]
+    end
+
+    subgraph WEB["Web & Misc"]
+        direction TB
+        nk-web["nk-web"]
+        github[".github"]
+        demo-repository["demo-repository"]
+    end
+
+    NekoVoid -->|build| CORE
+    NekoVoid -->|drivers| HW
+    NekoVoid -->|ui| DESKTOP
+    NekoVoid -->|utils| TOOLS
+    NekoVoid -->|docs| WEB
+
+    classDef core fill:#0f261a,stroke:#22c55e,stroke-width:1px,color:#bbf7d0
+    classDef hw fill:#0a1f1a,stroke:#10b981,stroke-width:1px,color:#a7f3d0
+    classDef desktop fill:#0f1f0f,stroke:#84cc16,stroke-width:1px,color:#d9f99d
+    classDef tools fill:#0a1a1a,stroke:#14b8a6,stroke-width:1px,color:#99f6e4
+    classDef web fill:#141f0a,stroke:#a3e635,stroke-width:1px,color:#ecfccb
+    classDef center fill:#14532d,stroke:#4ade80,stroke-width:2px,color:#dcfce7,font-weight:bold
+
+    class Neko-Void,repo-neko,rootfs-custom,musl-repo core
+    class kernel-neko-void,Neko-Kernel-Manager,nvidia-support,bluetooth-enabler,printer-enable hw
+    class Neko-Wizard,neko-desktops,neko-backgrounds desktop
+    class cnr,falcond,raven-polkit,Neko-Update,dmemcg-booster-nk,kyoz tools
+    class nk-web,github,demo-repository web
+    class NekoVoid center
+
+    linkStyle 0 stroke:#22c55e,stroke-width:2px
+    linkStyle 1 stroke:#10b981,stroke-width:2px
+    linkStyle 2 stroke:#84cc16,stroke-width:2px
+    linkStyle 3 stroke:#14b8a6,stroke-width:2px
+    linkStyle 4 stroke:#a3e635,stroke-width:2px
+```
