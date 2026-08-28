@@ -26,88 +26,61 @@ You can find more information, documentation, and access our downloads by visiti
 
 ```mermaid
 %%{init: {'theme': 'dark', 'themeVariables': {
-  'primaryColor': '#0f261a',
-  'primaryTextColor': '#bbf7d0',
+  'primaryColor': '#14532d',
+  'primaryTextColor': '#dcfce7',
   'primaryBorderColor': '#22c55e',
   'lineColor': '#166534',
-  'secondaryColor': '#14532d',
-  'tertiaryColor': '#0f261a',
-  'background': '#070f0b',
-  'mainBkg': '#0f261a',
+  'secondaryColor': '#0f261a',
+  'tertiaryColor': '#0a1a12',
+  'background': '#050d09',
+  'mainBkg': '#14532d',
   'nodeBorder': '#22c55e',
   'clusterBkg': '#0a1a12',
-  'clusterBorder': '#14532d',
+  'clusterBorder': '#166534',
   'fontFamily': 'Inter, -apple-system, sans-serif',
-  'fontSize': '13px'
+  'fontSize': '12px'
 }}}%%
 flowchart LR
 
-    NekoVoid(("Neko Void"))
+    NV(("Neko Void"))
 
-    subgraph CORE["Core & Build"]
-        direction TB
-        Neko-Void["Neko-Void"]
-        repo-neko["repo-neko"]
-        rootfs-custom["rootfs-custom"]
-        musl-repo["musl-repo"]
-    end
+    NV --> C(["Core & Build"])
+    NV --> H(["Hardware & Kernel"])
+    NV --> D(["Desktop Experience"])
+    NV --> T(["Tools & Daemons"])
+    NV --> W(["Web & Misc"])
 
-    subgraph HW["Hardware & Kernel"]
-        direction TB
-        kernel-neko-void["kernel-neko-void"]
-        Neko-Kernel-Manager["Neko-Kernel-Manager"]
-        nvidia-support["nvidia-support"]
-        bluetooth-enabler["bluetooth-enabler"]
-        printer-enable["printer-enable"]
-    end
+    C --> C1["Neko-Void"]
+    C --> C2["repo-neko"]
+    C --> C3["rootfs-custom"]
+    C --> C4["musl-repo"]
 
-    subgraph DESKTOP["Desktop Experience"]
-        direction TB
-        Neko-Wizard["Neko-Wizard"]
-        neko-desktops["neko-desktops"]
-        neko-backgrounds["neko-backgrounds"]
-    end
+    H --> H1["kernel-neko-void"]
+    H --> H2["Neko-Kernel-Manager"]
+    H --> H3["nvidia-support"]
+    H --> H4["bluetooth-enabler"]
+    H --> H5["printer-enable"]
 
-    subgraph TOOLS["Tools & Daemons"]
-        direction TB
-        cnr["cnr"]
-        falcond["falcond"]
-        raven-polkit["raven-polkit"]
-        Neko-Update["Neko-Update"]
-        dmemcg-booster-nk["dmemcg-booster-nk"]
-        kyoz["kyoz"]
-    end
+    D --> D1["Neko-Wizard"]
+    D --> D2["neko-desktops"]
+    D --> D3["neko-backgrounds"]
 
-    subgraph WEB["Web & Misc"]
-        direction TB
-        nk-web["nk-web"]
-        github[".github"]
-        demo-repository["demo-repository"]
-    end
+    T --> T1["cnr"]
+    T --> T2["falcond"]
+    T --> T3["raven-polkit"]
+    T --> T4["Neko-Update"]
+    T --> T5["dmemcg-booster-nk"]
+    T --> T6["kyoz"]
 
-    NekoVoid -->|build| CORE
-    NekoVoid -->|drivers| HW
-    NekoVoid -->|ui| DESKTOP
-    NekoVoid -->|utils| TOOLS
-    NekoVoid -->|docs| WEB
+    W --> W1["nk-web"]
+    W --> W2[".github"]
+    W --> W3["demo-repository"]
 
-    classDef core fill:#0f261a,stroke:#22c55e,stroke-width:1px,color:#bbf7d0
-    classDef hw fill:#0a1f1a,stroke:#10b981,stroke-width:1px,color:#a7f3d0
-    classDef desktop fill:#0f1f0f,stroke:#84cc16,stroke-width:1px,color:#d9f99d
-    classDef tools fill:#0a1a1a,stroke:#14b8a6,stroke-width:1px,color:#99f6e4
-    classDef web fill:#141f0a,stroke:#a3e635,stroke-width:1px,color:#ecfccb
-    classDef center fill:#14532d,stroke:#4ade80,stroke-width:2px,color:#dcfce7,font-weight:bold
+    classDef center fill:#166534,stroke:#4ade80,stroke-width:2px,color:#f0fdf4,font-weight:bold
+    classDef cat fill:#14532d,stroke:#22c55e,stroke-width:1px,color:#dcfce7,font-weight:bold
+    classDef repo fill:#0a1f15,stroke:#15803d,stroke-width:1px,color:#bbf7d0
 
-    class Neko-Void,repo-neko,rootfs-custom,musl-repo core
-    class kernel-neko-void,Neko-Kernel-Manager,nvidia-support,bluetooth-enabler,printer-enable hw
-    class Neko-Wizard,neko-desktops,neko-backgrounds desktop
-    class cnr,falcond,raven-polkit,Neko-Update,dmemcg-booster-nk,kyoz tools
-    class nk-web,github,demo-repository web
-    class NekoVoid center
-
-    linkStyle 0 stroke:#22c55e,stroke-width:2px
-    linkStyle 1 stroke:#10b981,stroke-width:2px
-    linkStyle 2 stroke:#84cc16,stroke-width:2px
-    linkStyle 3 stroke:#14b8a6,stroke-width:2px
-    linkStyle 4 stroke:#a3e635,stroke-width:2px
+    class NV center
+    class C,H,D,T,W cat
+    class C1,C2,C3,C4,H1,H2,H3,H4,H5,D1,D2,D3,T1,T2,T3,T4,T5,T6,W1,W2,W3 repo
 ```
