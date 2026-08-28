@@ -22,64 +22,38 @@ You can find more information, documentation, and access our downloads by visiti
 
 # KYOUKO LOVE's VOIDLINUX
 
-## Repository Map (🗺️)
+## Repository Map UwU
 
 ```mermaid
-graph TD
+graph LR
   NV((Neko Void)) --> Core[Core & Build]
   NV --> HW[Hardware & Kernel]
   NV --> Desktop[Desktop Experience]
   NV --> Tools[Tools & Daemons]
   NV --> Web[Web & Misc]
 
-  Core --> Neko-Void("Neko-Void")
-  Core --> repo-neko("repo-neko")
-  Core --> rootfs-custom("rootfs-custom")
-  Core --> musl-repo("musl-repo")
+  Core --> Neko-Void
+  Core --> repo-neko
+  Core --> rootfs-custom
+  Core --> musl-repo
 
-  click Neko-Void "/Neko-Void-Linux/Neko-Void"
-  click repo-neko "/Neko-Void-Linux/repo-neko"
-  click rootfs-custom "/Neko-Void-Linux/rootfs-custom"
-  click musl-repo "/Neko-Void-Linux/musl-repo"
+  HW --> kernel-neko-void
+  HW --> Neko-Kernel-Manager
+  HW --> nvidia-support
+  HW --> bluetooth-enabler
+  HW --> printer-enable
 
-  HW --> kernel-neko-void("kernel-neko-void")
-  HW --> Neko-Kernel-Manager("Neko-Kernel-Manager")
-  HW --> nvidia-support("nvidia-support")
-  HW --> bluetooth-enabler("bluetooth-enabler")
-  HW --> printer-enable("printer-enable")
+  Desktop --> Neko-Wizard
+  Desktop --> neko-desktops
+  Desktop --> neko-backgrounds
 
-  click kernel-neko-void "/Neko-Void-Linux/kernel-neko-void"
-  click Neko-Kernel-Manager "/Neko-Void-Linux/Neko-Kernel-Manager"
-  click nvidia-support "/Neko-Void-Linux/nvidia-support"
-  click bluetooth-enabler "/Neko-Void-Linux/bluetooth-enabler"
-  click printer-enable "/Neko-Void-Linux/printer-enable"
+  Tools --> cnr
+  Tools --> falcond
+  Tools --> raven-polkit
+  Tools --> Neko-Update
+  Tools --> dmemcg-booster-nk
+  Tools --> kyoz
 
-  Desktop --> Neko-Wizard("Neko-Wizard")
-  Desktop --> neko-desktops("neko-desktops")
-  Desktop --> neko-backgrounds("neko-backgrounds")
-
-  click Neko-Wizard "/Neko-Void-Linux/Neko-Wizard"
-  click neko-desktops "/Neko-Void-Linux/neko-desktops"
-  click neko-backgrounds "/Neko-Void-Linux/neko-backgrounds"
-
-  Tools --> cnr("cnr")
-  Tools --> falcond("falcond")
-  Tools --> raven-polkit("raven-polkit")
-  Tools --> Neko-Update("Neko-Update")
-  Tools --> dmemcg-booster-nk("dmemcg-booster-nk")
-  Tools --> kyoz("kyoz")
-
-  click cnr "/Neko-Void-Linux/cnr"
-  click falcond "/Neko-Void-Linux/falcond"
-  click raven-polkit "/Neko-Void-Linux/raven-polkit"
-  click Neko-Update "/Neko-Void-Linux/Neko-Update"
-  click dmemcg-booster-nk "/Neko-Void-Linux/dmemcg-booster-nk"
-  click kyoz "/Neko-Void-Linux/kyoz"
-
-  Web --> nk-web("nk-web")
+  Web --> nk-web
   Web --> github(".github")
-  Web --> demo-repository("demo-repository")
-
-  click nk-web "/Neko-Void-Linux/nk-web"
-  click github "/Neko-Void-Linux/.github"
-  click demo-repository "/Neko-Void-Linux/demo-repository"
+  Web --> demo-repository
