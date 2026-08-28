@@ -37,10 +37,10 @@ graph TD
   Core --> rootfs-custom("rootfs-custom")
   Core --> musl-repo("musl-repo")
 
-  click Neko-Void "[https://github.com/Neko-Void-Linux/Neko-Void](https://github.com/Neko-Void-Linux/Neko-Void)"
-  click repo-neko "[https://github.com/Neko-Void-Linux/repo-neko](https://github.com/Neko-Void-Linux/repo-neko)"
-  click rootfs-custom "[https://github.com/Neko-Void-Linux/rootfs-custom](https://github.com/Neko-Void-Linux/rootfs-custom)"
-  click musl-repo "[https://github.com/Neko-Void-Linux/musl-repo](https://github.com/Neko-Void-Linux/musl-repo)"
+  click Neko-Void "/Neko-Void-Linux/Neko-Void"
+  click repo-neko "/Neko-Void-Linux/repo-neko"
+  click rootfs-custom "/Neko-Void-Linux/rootfs-custom"
+  click musl-repo "/Neko-Void-Linux/musl-repo"
 
   HW --> kernel-neko-void("kernel-neko-void")
   HW --> Neko-Kernel-Manager("Neko-Kernel-Manager")
@@ -48,19 +48,19 @@ graph TD
   HW --> bluetooth-enabler("bluetooth-enabler")
   HW --> printer-enable("printer-enable")
 
-  click kernel-neko-void "[https://github.com/Neko-Void-Linux/kernel-neko-void](https://github.com/Neko-Void-Linux/kernel-neko-void)"
-  click Neko-Kernel-Manager "[https://github.com/Neko-Void-Linux/Neko-Kernel-Manager](https://github.com/Neko-Void-Linux/Neko-Kernel-Manager)"
-  click nvidia-support "[https://github.com/Neko-Void-Linux/nvidia-support](https://github.com/Neko-Void-Linux/nvidia-support)"
-  click bluetooth-enabler "[https://github.com/Neko-Void-Linux/bluetooth-enabler](https://github.com/Neko-Void-Linux/bluetooth-enabler)"
-  click printer-enable "[https://github.com/Neko-Void-Linux/printer-enable](https://github.com/Neko-Void-Linux/printer-enable)"
+  click kernel-neko-void "/Neko-Void-Linux/kernel-neko-void"
+  click Neko-Kernel-Manager "/Neko-Void-Linux/Neko-Kernel-Manager"
+  click nvidia-support "/Neko-Void-Linux/nvidia-support"
+  click bluetooth-enabler "/Neko-Void-Linux/bluetooth-enabler"
+  click printer-enable "/Neko-Void-Linux/printer-enable"
 
   Desktop --> Neko-Wizard("Neko-Wizard")
   Desktop --> neko-desktops("neko-desktops")
   Desktop --> neko-backgrounds("neko-backgrounds")
 
-  click Neko-Wizard "[https://github.com/Neko-Void-Linux/Neko-Wizard](https://github.com/Neko-Void-Linux/Neko-Wizard)"
-  click neko-desktops "[https://github.com/Neko-Void-Linux/neko-desktops](https://github.com/Neko-Void-Linux/neko-desktops)"
-  click neko-backgrounds "[https://github.com/Neko-Void-Linux/neko-backgrounds](https://github.com/Neko-Void-Linux/neko-backgrounds)"
+  click Neko-Wizard "/Neko-Void-Linux/Neko-Wizard"
+  click neko-desktops "/Neko-Void-Linux/neko-desktops"
+  click neko-backgrounds "/Neko-Void-Linux/neko-backgrounds"
 
   Tools --> cnr("cnr")
   Tools --> falcond("falcond")
@@ -69,17 +69,17 @@ graph TD
   Tools --> dmemcg-booster-nk("dmemcg-booster-nk")
   Tools --> kyoz("kyoz")
 
-  click cnr "[https://github.com/Neko-Void-Linux/cnr](https://github.com/Neko-Void-Linux/cnr)"
-  click falcond "[https://github.com/Neko-Void-Linux/falcond](https://github.com/Neko-Void-Linux/falcond)"
-  click raven-polkit "[https://github.com/Neko-Void-Linux/raven-polkit](https://github.com/Neko-Void-Linux/raven-polkit)"
-  click Neko-Update "[https://github.com/Neko-Void-Linux/Neko-Update](https://github.com/Neko-Void-Linux/Neko-Update)"
-  click dmemcg-booster-nk "[https://github.com/Neko-Void-Linux/dmemcg-booster-nk](https://github.com/Neko-Void-Linux/dmemcg-booster-nk)"
-  click kyoz "[https://github.com/Neko-Void-Linux/kyoz](https://github.com/Neko-Void-Linux/kyoz)"
+  click cnr "/Neko-Void-Linux/cnr"
+  click falcond "/Neko-Void-Linux/falcond"
+  click raven-polkit "/Neko-Void-Linux/raven-polkit"
+  click Neko-Update "/Neko-Void-Linux/Neko-Update"
+  click dmemcg-booster-nk "/Neko-Void-Linux/dmemcg-booster-nk"
+  click kyoz "/Neko-Void-Linux/kyoz"
 
   Web --> nk-web("nk-web")
   Web --> github(".github")
   Web --> demo-repository("demo-repository")
 
-  click nk-web "[https://github.com/Neko-Void-Linux/nk-web](https://github.com/Neko-Void-Linux/nk-web)"
-  click github "[https://github.com/Neko-Void-Linux/.github](https://github.com/Neko-Void-Linux/.github)"
-  click demo-repository "[https://github.com/Neko-Void-Linux/demo-repository](https://github.com/Neko-Void-Linux/demo-repository)"
+  click nk-web "/Neko-Void-Linux/nk-web"
+  click github "/Neko-Void-Linux/.github"
+  click demo-repository "/Neko-Void-Linux/demo-repository"
