@@ -16,7 +16,7 @@ Within this organization, we manage the development environment and foster open-
 
 ## Official Links (ﾉ^ヮ^)ﾉ*:･ﾟ✧
 
-You can find more information, documentation, and access our downloads by visiting our official website at nekovoid.vercel.app or by exploring the pinned repositories on this page. (=^ ◡ ^=)
+You can find more information, documentation, and access our downloads by visiting our official website at https://www.neko-void-linux.online or by exploring the pinned repositories on this page. (=^ ◡ ^=)
 
 <img width="130" height="178" alt="Kyoko RENDER" src="https://github.com/user-attachments/assets/324a1096-7447-4781-bad6-5a2c9e56ad3a" />
 
