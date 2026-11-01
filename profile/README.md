@@ -44,13 +44,13 @@ You can find more information, documentation, and access our downloads by visiti
 }}}%%
 flowchart LR
 
-    NV(("Neko Void"))
+    NV["Neko Void"]
 
-    NV --> C(["Core & Build"])
-    NV --> H(["Hardware & Kernel"])
-    NV --> D(["Desktop Experience"])
-    NV --> T(["Tools & Daemons"])
-    NV --> W(["Web & Misc"])
+    NV --> C["Core & Build"]
+    NV --> H["Hardware & Kernel"]
+    NV --> D["Desktop Experience"]
+    NV --> T["Tools & Daemons"]
+    NV --> W["Web & Misc"]
 
     C --> C1["Neko-Void"]
     C --> C2["repo-neko"]
