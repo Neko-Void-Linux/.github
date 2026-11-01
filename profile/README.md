@@ -2,6 +2,8 @@
 
 Welcome to the official Neko Void development organization. We are the team behind the Venezuelan-origin distribution designed to bring the power, lightness, and independence of Void Linux to any user without technical complications. \o/
 
+note: you can use our forum https://fr.neko-void-linux.online/
+
 ## About Us (^._.^)ﾉ
 
 Our main focus is to offer the speed of a minimal base system along with a ready-to-use desktop experience. We facilitate the use of a systemd-free environment through graphical installers and native post-installation tools. The system is optimized for various daily workflows, covering (a) gaming [+..••], (b) design, (c) music production ♪, (d) video editing [|>], and (e) office tasks.
